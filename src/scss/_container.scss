@@ -1,0 +1,21 @@
+$breakpoints: (
+  xs: 30rem,
+  sm: 48rem,
+  md: 62rem,
+  lg: 75rem,
+);
+
+@each $key, $val in $breakpoints {
+  @media (min-width: #{$val}) {
+    $percent: calc(#{$val} * 0.02217741935);
+    $width: calc(#{$val} - #{$percent});
+
+    .container {
+      width: $width;
+    }
+  }
+}
+
+:root {
+  --navbar-height: 8rem;
+}
