@@ -10,8 +10,8 @@ $breakpoints: (
     $percent: calc(#{$val} * 0.02217741935);
     $width: calc(#{$val} - #{$percent});
 
-    .container {
-      width: $width;
-    }
+    //.container {
+    //  width: $width;
+    //}
   }
 }
