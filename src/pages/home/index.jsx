@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className="container-main">
       <Navbar />
       <Header data={landingPageData.Header} />
       <Features data={landingPageData.Features} />
@@ -28,7 +28,7 @@ function Home() {
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
       <Footer />
-    </>
+    </div>
   );
 }
 

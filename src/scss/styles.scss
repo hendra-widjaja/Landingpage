@@ -1,11 +1,15 @@
+@import "./generator";
 @import "./container";
-@import "./nav.scss";
-@import "./header.scss";
+@import "./nav";
+@import "./header";
 @import "./breakpoints";
+@import "./about";
 
 :root {
   --navbar-height: 5rem;
   --navbar-height-mobile: 3rem;
+  --section-gap: 5rem;
+  --sub-section-gap: 2rem;
 }
 
 body {
@@ -74,4 +78,14 @@ a {
     background-color: #6372ff;
     transition: all 1s linear;
   }
+}
+
+.container-main {
+  @include flex($direction: column);
+  gap: var(--section-gap);
+}
+
+.sub-section-col {
+  @include flex($direction: column);
+  gap: var(--sub-section-gap);
 }

@@ -2,7 +2,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const Services = (props) => {
   return (
-    <section id="services" className="text-center">
+    <section id="services" className="mx-4 text-center">
       <div className="container">
         <div className="section-title">
           <h2>Our Services</h2>

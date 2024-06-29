@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 
-export const Gallery = (props) => {
+export const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -30,7 +30,7 @@ export const Gallery = (props) => {
   };
 
   return (
-    <section id="portfolio" className="text-center">
+    <section id="portfolio" className="mx-4">
       <div className="container">
         <div className="section-title">
           <h2>Gallery</h2>

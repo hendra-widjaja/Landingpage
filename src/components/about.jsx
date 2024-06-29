@@ -1,58 +1,60 @@
 import { AnimationOnScroll } from "react-animation-on-scroll";
+
 export const About = (props) => {
   return (
-    <section id="about">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-md-6">
-            <AnimationOnScroll
-              delay={200}
-              animateOnce
-              animateIn="animate__rotateInDownLeft"
-            >
-              <img src="./img/about.jpg" className="img-responsive" alt="" />
-            </AnimationOnScroll>
-          </div>
-          <div className="col-xs-12 col-md-6">
-            <div className="about-text">
+    <section id="about" className="mx-4">
+      <div className="sub-section">
+        <div className="sub-section-left">
+          <AnimationOnScroll
+            delay={200}
+            animateOnce
+            animateIn="animate__rotateInDownLeft"
+          >
+            <img src="./img/about.jpg" className="img-responsive" alt="" />
+          </AnimationOnScroll>
+        </div>
+
+        <div className="sub-section-right">
+          <div className="about-text">
+            <div className="about-text-top">
               <h2>About Us</h2>
-
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
+            </div>
 
+            <div className="about-text-bottom">
               <h3>Why Choose Us?</h3>
-              <div className="list-style">
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {props.data
-                      ? props.data.Why.map((d, i) => (
+              <div className="container-list">
+                <ul className="list">
+                  {props.data
+                    ? props.data.Why.map((d, i) => (
+                        <li className="list-item" key={`${d}-${i}`}>
                           <AnimationOnScroll
-                            delay={i * 350}
+                            delay={i * 250}
                             animateOnce
                             animateIn="animate__fadeInUp"
-                            key={`${d}-${i}`}
                           >
-                            <li>{d}</li>
+                            {d}
                           </AnimationOnScroll>
-                        ))
-                      : "loading"}
-                  </ul>
-                </div>
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {props.data
-                      ? props.data.Why2.map((d, i) => (
+                        </li>
+                      ))
+                    : "loading"}
+                </ul>
+
+                <ul className="list">
+                  {props.data
+                    ? props.data.Why2.map((d, i) => (
+                        <li className="list-item" key={`${d}-${i}`}>
                           <AnimationOnScroll
-                            delay={i * 350}
+                            delay={i * 500}
                             animateOnce
                             animateIn="animate__fadeInUp"
-                            key={`${d}-${i}`}
                           >
-                            <li> {d}</li>
+                            {d}
                           </AnimationOnScroll>
-                        ))
-                      : "loading"}
-                  </ul>
-                </div>
+                        </li>
+                      ))
+                    : "loading"}
+                </ul>
               </div>
             </div>
           </div>

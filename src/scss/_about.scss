@@ -1,0 +1,33 @@
+@import "./dynamic";
+
+#about {
+  .sub-section {
+    @include flex();
+    gap: 1.5rem;
+
+    &-left {
+      flex-basis: 50%;
+    }
+
+    &-right {
+      flex-basis: 50%;
+    }
+  }
+
+  .about-text,
+  .about-text-top,
+  .about-text-bottom {
+    @include flex($direction: column);
+    gap: 1.5rem;
+  }
+
+  .container-list {
+    @include flex();
+    gap: 3rem;
+
+    .list {
+      @include flex($direction: column);
+      gap: 0.5rem;
+    }
+  }
+}

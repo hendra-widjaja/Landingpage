@@ -2,7 +2,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const Testimonials = (props) => {
   return (
-    <section id="testimonials">
+    <section id="testimonials" className="mx-4">
       <div className="container">
         <div className="section-title text-center">
           <AnimationOnScroll animateOnce animateIn="animate__fadeInUp">
