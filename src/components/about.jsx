@@ -1,5 +1,4 @@
 import { AnimationOnScroll } from "react-animation-on-scroll";
-
 export const About = (props) => {
   return (
     <section id="about">
@@ -11,7 +10,7 @@ export const About = (props) => {
               animateOnce
               animateIn="animate__rotateInDownLeft"
             >
-              <img src="img/about.jpg" className="img-responsive" alt="" />
+              <img src="./img/about.jpg" className="img-responsive" alt="" />
             </AnimationOnScroll>
           </div>
           <div className="col-xs-12 col-md-6">
@@ -31,7 +30,7 @@ export const About = (props) => {
                             animateOnce
                             animateIn="animate__fadeInUp"
                           >
-                            <li key={`${d}-${i}`}>{d}</li>{" "}
+                            <li key={`${d}-${i}`}>{d}</li>
                           </AnimationOnScroll>
                         ))
                       : "loading"}
@@ -46,7 +45,7 @@ export const About = (props) => {
                             animateOnce
                             animateIn="animate__fadeInUp"
                           >
-                            <li key={`${d}-${i}`}> {d}</li>{" "}
+                            <li key={`${d}-${i}`}> {d}</li>
                           </AnimationOnScroll>
                         ))
                       : "loading"}

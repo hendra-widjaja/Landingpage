@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const [navBarBackground, setNavBarBackgorund] = useState(false);
 
   const changeBackground = () => {
@@ -25,8 +25,8 @@ export const Navbar = () => {
             data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"
           >
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
+            <span className="sr-only">Toggle navigation</span>
+            <span className="icon-bar"></span>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
@@ -56,12 +56,12 @@ export const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
+              <a href="/#portfolio" className="page-scroll">
                 Gallery
               </a>
             </li>
             <li>
-              <a href="#testimonials" className="page-scroll">
+              <a href="/#testimonials" className="page-scroll">
                 Testimonials
               </a>
             </li>

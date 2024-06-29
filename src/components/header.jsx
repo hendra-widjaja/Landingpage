@@ -14,7 +14,6 @@ export const Header = (props) => {
             color: ["random", "#ff0000"],
           }}
         />
-
         <div className="overlay">
           <div className="container">
             <div className="row">
@@ -25,7 +24,7 @@ export const Header = (props) => {
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
                 <a
-                  href="/#features"
+                  href="#features"
                   className="btn btn-custom btn-lg page-scroll"
                 >
                   Learn More

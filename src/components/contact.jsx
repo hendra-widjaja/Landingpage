@@ -12,6 +12,7 @@ const initialState = {
 
 export const Contact = (props) => {
   const alert = useAlert();
+  // eslint-disable-next-line no-unused-vars
   const [{ name, email, message }, setState] = useState(initialState);
 
   const handleChange = (e) => {
@@ -186,7 +187,6 @@ export const Contact = (props) => {
             </AnimationOnScroll>
           </div>
         </div>
-        2ww{" "}
       </div>
     </section>
   );
