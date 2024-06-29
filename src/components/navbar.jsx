@@ -2,9 +2,15 @@ import { useEffect, useState } from "react";
 
 export const Navbar = (props) => {
   const [navBarBackground, setNavBarBackgorund] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
 
   const changeBackground = () => {
     setNavBarBackgorund(window.scrollY >= 15 ? true : false);
+    setMenuActive(window.scrollY <= 15 && false);
+  };
+
+  const onToggleClick = () => {
+    setMenuActive((prev) => !prev);
   };
 
   useEffect(() => {
@@ -18,19 +24,23 @@ export const Navbar = (props) => {
   return (
     <nav id="menu" className={`navbar${navBarBackground ? " active" : ""}`}>
       <div className="container-navbar">
-        <div className="navbar-controller">
-          <button type="button" className="navbar-toggle collapsed">
+        <div className={`navbar-controller${menuActive ? " toggled" : ""}`}>
+          <a className="navbar-brand" href="/#page-top">
+            My Landing Page
+          </a>
+
+          <button
+            type="button"
+            className="navbar-toggle"
+            onClick={() => onToggleClick()}
+          >
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-
-          <a className="navbar-brand" href="/#page-top">
-            My Landing Page
-          </a>
         </div>
 
-        <ul className="navbar-menu">
+        <ul className={`navbar-menu${menuActive ? " toggled" : ""}`}>
           <li className="navbar-menu-item">
             <a href="/#features" className="page-scroll">
               Features

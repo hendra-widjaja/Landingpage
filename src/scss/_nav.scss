@@ -5,6 +5,40 @@
   @include flex($position: relative);
   justify-content: space-between;
   width: 100%;
+
+  @include media(desktop) {
+    @include px(1rem);
+  }
+}
+
+.navbar-controller {
+  @include flex();
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+
+  @include media(mobile) {
+    @include px(1rem);
+  }
+}
+
+.navbar-toggle {
+  @include media(mobile) {
+    @include flex($direction: column);
+    border: none;
+    cursor: pointer;
+    gap: 0.25rem;
+    background-color: transparent;
+    background-image: none;
+
+    .icon-bar {
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 1px;
+      height: 2px;
+      width: 1.5rem;
+    }
+  }
 }
 
 .navbar {
@@ -19,14 +53,20 @@
   }
 
   &.active {
-    padding: 1rem;
     opacity: 1;
     background-color: #ffffff;
     border-color: rgba(231, 231, 231, 0);
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.15);
     transition: all 0.8s;
-    height: var(--navbar-height);
     z-index: 1;
+
+    @include media(mobile) {
+      height: var(--navbar-height-mobile);
+    }
+
+    @include media(desktop) {
+      height: var(--navbar-height);
+    }
   }
 
   a {
@@ -34,8 +74,36 @@
   }
 }
 
-.navbar-menu {
+.navbar-brand {
   @include flex();
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.navbar-menu {
+  display: flex;
   align-items: center;
-  gap: 1rem;
+
+  @include media(mobile) {
+    background-color: rgba(238, 238, 238, 1);
+    bottom: 0;
+    flex-direction: column;
+    gap: 2rem;
+    height: calc(50vh - var(--navbar-height-mobile));
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: calc(var(--navbar-height-mobile) * -50);
+    transition: all 0.5s ease-in;
+
+    &.toggled {
+      top: var(--navbar-height-mobile);
+      transition: all 0.75s ease-in-out;
+    }
+  }
+
+  @include media(desktop) {
+    gap: 1rem;
+    position: relative;
+  }
 }

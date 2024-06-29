@@ -26,14 +26,24 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   }
 }
 
-@mixin px($left, $right) {
-  padding-left: #{$left};
-  padding-right: #{$right};
+@mixin px($left, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
 }
 
-@mixin py($top, $bottom) {
-  padding-top: #{$top};
-  padding-bottom: #{$bottom};
+@mixin py($top, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin mx($left, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin my($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
 }
 
 @mixin mx-auto() {
@@ -41,14 +51,14 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   margin-right: auto;
 }
 
-@mixin flex($position: relative, $direction: "") {
+@mixin flex($position: relative, $direction: null) {
   display: flex;
 
-  @if $direction != null {
-    flex-direction: unquote($direction);
+  @if $direction {
+    flex-direction: $direction;
   }
 
-  @if $direction != null {
+  @if $position {
     position: $position;
   }
 }

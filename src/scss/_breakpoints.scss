@@ -5,6 +5,9 @@ $media-queries: (
   tablet: (
     breakpoint: "(min-width: 30rem) and (max-width: 48rem)",
   ),
+  desktop: (
+    breakpoint: "(min-width: 48rem)",
+  ),
 );
 
 @mixin media($size) {
@@ -24,5 +27,9 @@ $media-queries: (
 //  }
 
 //  @include media(tablet) {
+//    background: #e48616;
+//  }
+
+//  @include media(desktop) {
 //    background: #e48616;
 //  }
