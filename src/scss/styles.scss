@@ -1,16 +1,14 @@
 @import "./container";
 @import "./nav.scss";
 @import "./header.scss";
+@import "./breakpoints";
 
 :root {
   --navbar-height: 5rem;
 }
 
-html {
-  font-size: 16px !important;
-}
-
 body {
+  font-size: 16px !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -53,10 +51,13 @@ a {
   border-radius: 1.5rem;
   border: 0;
   color: #ffffff;
-  font-size: 0.9375rem;
+  font-size: clamp(0.75rem, 4vw, 1.25rem);
   font-weight: 500;
   padding: 0.875rem 2rem;
   transition: all 0.7s linear;
+
+  @include media(mobile) {
+  }
 
   &:not(:hover),
   &:not(:focus),

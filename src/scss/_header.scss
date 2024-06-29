@@ -1,39 +1,48 @@
 @import "./dynamic";
+@import "./breakpoints";
 
 .intro {
-  display: table;
-  position: relative;
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
   height: 100%;
   padding: 0;
-  background-color: black;
-  background-size: cover;
+  position: relative;
+  width: 100%;
 
   .overlay {
     background: rgba(0, 0, 0, 0.2);
   }
 
-  h1 {
+  h1,
+  p {
     color: #ffffff;
-    font-size: 5.125rem;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 8vw, 5.125rem);
     font-weight: 700;
     margin-bottom: 1rem;
+
+    @include media(mobile) {
+    }
   }
 
   p {
-    color: #ffffff;
-    font-size: 1.375rem;
+    font-size: clamp(1.25rem, 4vw, 1.375rem);
     font-weight: 400;
-    margin: 0 auto 5rem;
+    margin-bottom: clamp(1rem, 6vw, 5rem);
+
+    @include media(mobile) {
+    }
   }
 
   .intro-text {
     @include flex($direction: column);
     @include mx-auto();
     align-items: center;
-    justify-content: center;
     height: 100vh;
-    width: 50rem;
+    justify-content: center;
+    max-width: 50rem;
     text-align: center;
   }
 }
