@@ -9,14 +9,14 @@ export const Features = (props) => {
         </div>
         <div className="row">
           {props.data
-            ? props.data.map((d, i) => (
+            ? props.data.map((d, index) => (
                 <AnimationOnScroll
-                  delay={i * 130}
+                  delay={index * 130}
                   animateOnce
                   animateIn="animate__fadeInBottomRight"
+                  key={`${d.title}-${index}`}
                 >
-                  <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
-                    {" "}
+                  <div className="col-xs-6 col-md-3">
                     <i className={d.icon}></i>
                     <h3>{d.title}</h3>
                     <p>{d.text}</p>

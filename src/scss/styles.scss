@@ -30,3 +30,41 @@ ol {
   list-style: none;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 1.5rem;
+  border: 0;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.875rem 2rem;
+  transition: all 0.7s linear;
+
+  &:not(:hover),
+  &:not(:focus),
+  &:not(:active) {
+    background-color: #5ca9fb;
+    background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 70%);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-image: none;
+    background-color: #6372ff;
+    transition: all 1s linear;
+  }
+}

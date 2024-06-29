@@ -29,8 +29,9 @@ export const About = (props) => {
                             delay={i * 350}
                             animateOnce
                             animateIn="animate__fadeInUp"
+                            key={`${d}-${i}`}
                           >
-                            <li key={`${d}-${i}`}>{d}</li>
+                            <li>{d}</li>
                           </AnimationOnScroll>
                         ))
                       : "loading"}
@@ -44,8 +45,9 @@ export const About = (props) => {
                             delay={i * 350}
                             animateOnce
                             animateIn="animate__fadeInUp"
+                            key={`${d}-${i}`}
                           >
-                            <li key={`${d}-${i}`}> {d}</li>
+                            <li> {d}</li>
                           </AnimationOnScroll>
                         ))
                       : "loading"}

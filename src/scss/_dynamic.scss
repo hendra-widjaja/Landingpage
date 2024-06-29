@@ -1,4 +1,17 @@
-$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$spaceamounts: (
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  75,
+  100
+); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 
 @each $space in $spaceamounts {
@@ -23,8 +36,15 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   padding-bottom: #{$bottom};
 }
 
-@mixin flex() {
+@mixin mx-auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($position: relative, $direction) {
+  @if $direction != null {
+    flex-direction: $direction;
+  }
   display: flex;
-  position: relative;
-  @content;
+  position: $position;
 }

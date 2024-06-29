@@ -11,16 +11,16 @@ export const Testimonials = (props) => {
         </div>
         <div className="row">
           {props.data
-            ? props.data.map((d, i) => (
+            ? props.data.map((d, index) => (
                 <AnimationOnScroll
-                  delay={i * 350}
+                  delay={index * 350}
                   animateOnce
                   animateIn="animate__fadeInUp"
+                  key={`${d.name}-${index}`}
                 >
-                  <div key={`${d.name}-${i}`} className="col-md-4">
+                  <div className="col-md-4">
                     <div className="testimonial">
                       <div className="testimonial-image">
-                        {" "}
                         <img src={d.img} alt="" />
                       </div>
                       <div className="testimonial-content">

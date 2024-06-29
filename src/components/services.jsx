@@ -13,13 +13,14 @@ export const Services = (props) => {
         </div>
         <div className="row">
           {props.data
-            ? props.data.map((d, i) => (
+            ? props.data.map((d, index) => (
                 <AnimationOnScroll
-                  delay={i * 250}
+                  delay={index * 250}
                   animateOnce
                   animateIn="animate__fadeInTopLeft"
+                  key={`${d.name}-${index}`}
                 >
-                  <div key={`${d.name}-${i}`} className="col-md-4">
+                  <div className="col-md-4">
                     <i className={d.icon}></i>
                     <div className="service-desc">
                       <h3>{d.name}</h3>
