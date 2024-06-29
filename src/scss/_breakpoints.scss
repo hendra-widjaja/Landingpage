@@ -1,0 +1,28 @@
+$media-queries: (
+  mobile: (
+    breakpoint: "(max-width: 30rem)",
+  ),
+  tablet: (
+    breakpoint: "(min-width: 30rem) and (max-width: 48rem)",
+  ),
+);
+
+@mixin media($size) {
+  @each $item, $value in $media-queries {
+    @if $item == $size {
+      @if map-get($value, breakpoint) != null {
+        @media only screen and #{map-get($value, breakpoint)} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+//  @include media(mobile) {
+//    background: #e4dd16;
+//  }
+
+//  @include media(tablet) {
+//    background: #e48616;
+//  }

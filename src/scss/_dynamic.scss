@@ -41,10 +41,14 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   margin-right: auto;
 }
 
-@mixin flex($position: relative, $direction) {
-  @if $direction != null {
-    flex-direction: $direction;
-  }
+@mixin flex($position: relative, $direction: "") {
   display: flex;
-  position: $position;
+
+  @if $direction != null {
+    flex-direction: unquote($direction);
+  }
+
+  @if $direction != null {
+    position: $position;
+  }
 }
