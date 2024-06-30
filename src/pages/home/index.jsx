@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { About } from "../../components/about";
-import { Contact } from "../../components/contact";
-import { Features } from "../../components/features";
-import { Footer } from "../../components/footer";
-import { Portfolio } from "../../components/portfolio";
-import { Header } from "../../components/header";
-import { Navbar } from "../../components/navbar";
-import { Services } from "../../components/services";
-import { Testimonials } from "../../components/testimonials";
+
 import JsonData from "../../data/data.json";
+import { Navbar } from "../../components/navbar";
+import { Header } from "../../components/header";
+import { Features } from "../../components/features";
+import { About } from "../../components/about";
+import { Services } from "../../components/services";
+import { Portfolio } from "../../components/portfolio";
+import { Testimonials } from "../../components/testimonials";
+import { Contact } from "../../components/contact";
+import { Footer } from "../../components/footer";
 
 function Home() {
   const [landingPageData, setLandingPageData] = useState({});
@@ -34,6 +35,8 @@ function Home() {
       <div className="divider" />
 
       <Testimonials data={landingPageData.Testimonials} />
+      <div className="divider" />
+
       <Contact data={landingPageData.Contact} />
       <Footer />
     </div>
