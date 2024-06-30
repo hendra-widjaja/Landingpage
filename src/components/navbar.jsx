@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
+import { useWindowSize } from "./helper/hooks/useWindowSize";
 
 export const Navbar = (props) => {
+  const [width, height] = useWindowSize();
   const [navBarBackground, setNavBarBackgorund] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
 
   const changeBackground = () => {
-    setNavBarBackgorund(window.scrollY >= 15 ? true : false);
+    setNavBarBackgorund(window.scrollY >= 15);
     setMenuActive(window.scrollY <= 15 && false);
   };
 
   const onToggleClick = () => {
-    setMenuActive((prev) => !prev);
+    if (width < 768) {
+      setMenuActive((prev) => !prev);
+    }
   };
 
   useEffect(() => {
@@ -29,17 +33,19 @@ export const Navbar = (props) => {
             My Landing Page
           </a>
 
-          <button
-            role="button"
-            aria-label="navbar-toggle"
-            type="button"
-            className="navbar-toggle"
-            onClick={() => onToggleClick()}
-          >
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
+          {width < 768 && (
+            <button
+              role="button"
+              aria-label="navbar-toggle"
+              type="button"
+              className="navbar-toggle"
+              onClick={() => onToggleClick()}
+            >
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+          )}
         </div>
 
         <ul className={`navbar-menu${menuActive ? " toggled" : ""}`}>

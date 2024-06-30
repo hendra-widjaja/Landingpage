@@ -5,25 +5,26 @@ export const Features = (props) => {
     <section id="features">
       <div className="section-top">
         <h2>Features</h2>
-
-        <div className="section-bottom">
-          {props.data
-            ? props.data.map((d, index) => (
-                <AnimationOnScroll
-                  delay={index * 130}
-                  animateOnce
-                  animateIn="animate__fadeInBottomRight"
-                  key={`${d.title}-${index}`}
-                >
-                  <div className="col-xs-6 col-md-3">
+      </div>
+      <div className="section-bottom">
+        {props.data
+          ? props.data.map((d, index) => (
+              <AnimationOnScroll
+                delay={index * 130}
+                animateOnce
+                animateIn="animate__fadeInBottomRight"
+                key={`${d.title}-${index}`}
+              >
+                <div className="card">
+                  <div className="card-title">
                     <i className={d.icon}></i>
                     <h3>{d.title}</h3>
-                    <p>{d.text}</p>
                   </div>
-                </AnimationOnScroll>
-              ))
-            : "Loading..."}
-        </div>
+                  <p>{d.text}</p>
+                </div>
+              </AnimationOnScroll>
+            ))
+          : "Loading..."}
       </div>
     </section>
   );

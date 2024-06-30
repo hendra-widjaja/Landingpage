@@ -39,3 +39,12 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin divider($space: null) {
+  @if $space {
+    min-height: $space;
+  }
+
+  min-height: 1px;
+  color: red;
+}

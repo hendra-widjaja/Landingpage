@@ -5,9 +5,14 @@
   @include mx(1rem);
 
   .section-top {
+    gap: 1rem;
+
+    @include media(mobile) {
+      @include flex($direction: column);
+    }
+
     @include media(desktop) {
       @include flex();
-      gap: 1.5rem;
     }
   }
 
@@ -17,12 +22,24 @@
       flex: 50% 0;
     }
 
-    &-right {
-      @include media(mobile) {
-        margin-top: 1rem;
+    &-left {
+      img {
+        @include flex();
       }
+    }
 
-      @include media(desktop) {
+    &-right {
+      &-top,
+      &-bottom {
+        @include flex($direction: column);
+
+        @include media(mobile) {
+          gap: 1rem;
+        }
+
+        @include media(desktop) {
+          gap: 1.5rem;
+        }
       }
     }
   }
@@ -30,12 +47,6 @@
   .about-text {
     @include flex($direction: column);
     gap: 3rem;
-  }
-
-  .section-top,
-  .section-bottom {
-    @include flex($direction: column);
-    gap: 1rem;
   }
 
   .container-list {

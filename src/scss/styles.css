@@ -220,7 +220,7 @@
   justify-content: space-between;
   width: 100%;
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48.05rem) {
   .container-navbar {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -242,23 +242,21 @@
   }
 }
 
-@media only screen and (max-width: 30rem) {
-  .navbar-toggle {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border: none;
-    cursor: pointer;
-    gap: 0.25rem;
-    background-color: transparent;
-    background-image: none;
-  }
-  .navbar-toggle .icon-bar {
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 1px;
-    height: 2px;
-    width: 1.5rem;
-  }
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  gap: 0.25rem;
+  background-color: transparent;
+  background-image: none;
+}
+.navbar-toggle .icon-bar {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 1px;
+  height: 2px;
+  width: 1.5rem;
 }
 
 .navbar {
@@ -270,7 +268,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
   height: 0;
-  transition: all 0.8s;
+  transition: all 1s;
 }
 .navbar.active {
   opacity: 1;
@@ -285,7 +283,7 @@
     height: var(--navbar-height-mobile);
   }
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48.05rem) {
   .navbar.active {
     height: var(--navbar-height);
   }
@@ -325,7 +323,7 @@
     transition: all 0.75s ease-out;
   }
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48.05rem) {
   .navbar-menu {
     gap: 1rem;
     position: relative;
@@ -372,29 +370,114 @@
 
 #features {
   display: flex;
+  flex-direction: column;
   position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+@media only screen and (max-width: 30rem) {
+  #features {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 48.05rem) {
+  #features {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    gap: 1.5rem;
+  }
+}
+#features .section-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media only screen and (max-width: 30rem) {
+  #features .section-top {
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 48.05rem) {
+  #features .section-top {
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+@media only screen and (max-width: 30rem) {
+  #features .section-bottom {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 48.05rem) {
+  #features .section-bottom {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+  }
+}
+#features .section-bottom .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
+}
+#features .section-bottom .card-title {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #about {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-@media only screen and (min-width: 48rem) {
+#about .section-top {
+  gap: 1rem;
+}
+@media only screen and (max-width: 30rem) {
+  #about .section-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 48.05rem) {
   #about .section-top {
     display: flex;
     position: relative;
-    gap: 1.5rem;
   }
 }
 #about .section-left,
 #about .section-right {
   flex: 50% 0;
 }
+#about .section-left img {
+  display: flex;
+  position: relative;
+}
+#about .section-right-top,
+#about .section-right-bottom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 @media only screen and (max-width: 30rem) {
-  #about .section-right {
-    margin-top: 1rem;
+  #about .section-right-top,
+  #about .section-right-bottom {
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 48.05rem) {
+  #about .section-right-top,
+  #about .section-right-bottom {
+    gap: 1.5rem;
   }
 }
 #about .about-text {
@@ -402,13 +485,6 @@
   flex-direction: column;
   position: relative;
   gap: 3rem;
-}
-#about .section-top,
-#about .section-bottom {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 1rem;
 }
 #about .container-list {
   display: flex;
@@ -524,15 +600,15 @@
   margin-left: 1rem;
   margin-right: 1rem;
   align-items: center;
-  background-color: #f4f4f4;
+  background-color: var(--color-white-9);
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48.05rem) {
   #testimonials {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
   }
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48.05rem) {
   #testimonials .section-top {
     padding-bottom: 4.5rem;
   }
@@ -587,19 +663,21 @@
     height: var(--footer-height-mobile);
   }
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48.05rem) {
   #footer .section-top {
     height: var(--footer-height);
   }
 }
 
 :root {
-  --navbar-height: 5rem;
+  --color-white-9: rgba(244, 244, 244, 0.9);
   --navbar-height-mobile: 3rem;
-  --section-gap: 5rem;
-  --sub-section-gap: 2rem;
-  --footer-height: 3.5rem;
+  --navbar-height: 5rem;
+  --section-gap-mobile: 2rem;
+  --section-gap-tablet: 2.5rem;
+  --section-gap: 3rem;
   --footer-height-mobile: 3rem;
+  --footer-height: 3.5rem;
 }
 
 * {
@@ -699,7 +777,21 @@ input {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: var(--section-gap);
+}
+@media only screen and (max-width: 30rem) {
+  .container-main {
+    gap: var(--section-gap-mobile);
+  }
+}
+@media only screen and (min-width: 30rem) and (max-width: 48rem) {
+  .container-main {
+    gap: var(--section-gap-tablet);
+  }
+}
+@media only screen and (min-width: 48.05rem) {
+  .container-main {
+    gap: var(--section-gap);
+  }
 }
 
 .sub-section-col {
@@ -707,6 +799,18 @@ input {
   flex-direction: column;
   position: relative;
   gap: var(--sub-section-gap);
+}
+
+.divider {
+  background-color: var(--color-white-9);
+  height: 100%;
+  position: relative;
+}
+.divider:not(.divider-solid) {
+  min-height: 1px;
+}
+.divider.divider-solid {
+  min-height: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

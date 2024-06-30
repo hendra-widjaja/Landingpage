@@ -21,10 +21,16 @@ function Home() {
     <div className="container-main">
       <Navbar />
       <Header data={landingPageData.Header} />
+      <div className="divider" />
+
       <Features data={landingPageData.Features} />
       <About data={landingPageData.About} />
+      <div className="divider" />
+
       <Services data={landingPageData.Services} />
       <Portfolio />
+      <div className="divider" />
+
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
       <Footer />

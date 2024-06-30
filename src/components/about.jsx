@@ -16,12 +16,12 @@ export const About = (props) => {
 
         <div className="section-right">
           <div className="about-text">
-            <div className="section-top">
+            <div className="section-right-top">
               <h2>About Us</h2>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
             </div>
 
-            <div className="section-bottom">
+            <div className="section-right-bottom">
               <h3>Why Choose Us?</h3>
               <div className="container-list">
                 <ul className="list">

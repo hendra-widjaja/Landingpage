@@ -12,12 +12,14 @@
 @import "./footer";
 
 :root {
-  --navbar-height: 5rem;
+  --color-white-9: rgba(244, 244, 244, 0.9);
   --navbar-height-mobile: 3rem;
-  --section-gap: 5rem;
-  --sub-section-gap: 2rem;
-  --footer-height: 3.5rem;
+  --navbar-height: 5rem;
+  --section-gap-mobile: 2rem;
+  --section-gap-tablet: 2.5rem;
+  --section-gap: 3rem;
   --footer-height-mobile: 3rem;
+  --footer-height: 3.5rem;
 }
 
 * {
@@ -120,10 +122,35 @@ input {
 
 .container-main {
   @include flex($direction: column);
-  gap: var(--section-gap);
+
+  @include media(mobile) {
+    gap: var(--section-gap-mobile);
+  }
+
+  @include media(tablet) {
+    gap: var(--section-gap-tablet);
+  }
+
+  @include media(desktop) {
+    gap: var(--section-gap);
+  }
 }
 
 .sub-section-col {
   @include flex($direction: column);
   gap: var(--sub-section-gap);
+}
+
+.divider {
+  background-color: var(--color-white-9);
+  height: 100%;
+  position: relative;
+
+  &:not(.divider-solid) {
+    min-height: 1px;
+  }
+
+  &.divider-solid {
+    min-height: 5px;
+  }
 }

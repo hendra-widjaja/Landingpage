@@ -2,6 +2,54 @@
 @import "./breakpoints";
 
 #features {
-  @include flex();
+  @include flex($direction: column);
   @include mx(1rem);
+
+  @include media(mobile) {
+    @include py(1rem, 1.5rem);
+    gap: 1rem;
+  }
+
+  @include media(desktop) {
+    @include py(1.5rem, 2rem);
+    gap: 1.5rem;
+  }
+
+  .section {
+    &-top {
+      @include flex($direction: column);
+
+      @include media(mobile) {
+        gap: 1rem;
+      }
+
+      @include media(desktop) {
+        @include flex-center();
+        gap: 1.5rem;
+      }
+    }
+
+    &-bottom {
+      @include media(mobile) {
+        @include flex($direction: column);
+        gap: 1rem;
+      }
+
+      @include media(desktop) {
+        @include flex();
+        gap: 1rem;
+      }
+
+      .card {
+        @include flex($direction: column);
+        gap: 0.5rem;
+      }
+
+      .card-title {
+        @include flex();
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
 }
