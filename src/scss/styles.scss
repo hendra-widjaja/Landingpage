@@ -97,6 +97,27 @@ img {
   max-width: 100%;
 }
 
+button {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input {
+  line-height: normal;
+}
+
 .container-main {
   @include flex($direction: column);
   gap: var(--section-gap);

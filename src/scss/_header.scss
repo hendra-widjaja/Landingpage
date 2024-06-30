@@ -35,14 +35,13 @@
     @include media(mobile) {
     }
   }
+}
 
-  .intro-text {
-    @include flex($direction: column);
-    @include mx-auto();
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-    max-width: 50rem;
-    text-align: center;
-  }
+.intro-text {
+  @include flex($direction: column);
+  @include mx-auto();
+  @include flex-center();
+  height: 100vh;
+  max-width: 60rem;
+  text-align: center;
 }

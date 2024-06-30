@@ -34,3 +34,8 @@
     position: $position;
   }
 }
+
+@mixin flex-center() {
+  align-items: center;
+  justify-content: center;
+}

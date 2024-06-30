@@ -30,11 +30,10 @@
 
       h4 {
         @include flex($position: absolute);
-        align-items: center;
+        @include flex-center();
         bottom: 0;
         color: #ffffff;
         font-weight: 500;
-        justify-content: center;
         left: 0;
         opacity: 0;
         right: 0;

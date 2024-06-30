@@ -6,8 +6,7 @@
 
   .section-top {
     @include flex();
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
 
     @include media(mobile) {
       height: var(--footer-height-mobile);

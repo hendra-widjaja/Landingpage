@@ -101,7 +101,7 @@
 
     &.toggled {
       top: var(--navbar-height-mobile);
-      transition: all 0.75s ease-in-out;
+      transition: all 0.75s ease-out;
     }
   }
 
