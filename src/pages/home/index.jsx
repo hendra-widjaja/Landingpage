@@ -3,7 +3,7 @@ import { About } from "../../components/about";
 import { Contact } from "../../components/contact";
 import { Features } from "../../components/features";
 import { Footer } from "../../components/footer";
-import { Gallery } from "../../components/gallery";
+import { Portfolio } from "../../components/portfolio";
 import { Header } from "../../components/header";
 import { Navbar } from "../../components/navbar";
 import { Services } from "../../components/services";
@@ -24,7 +24,7 @@ function Home() {
       <Features data={landingPageData.Features} />
       <About data={landingPageData.About} />
       <Services data={landingPageData.Services} />
-      <Gallery />
+      <Portfolio />
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
       <Footer />

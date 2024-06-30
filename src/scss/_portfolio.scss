@@ -1,0 +1,68 @@
+@import "./dynamic";
+
+#portfolio {
+  @include flex($direction: column);
+  gap: 3rem;
+
+  .section-top {
+    @include flex($direction: column);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-bottom {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .portfolio {
+      position: relative;
+      cursor: pointer;
+      flex: 31%;
+      width: 100%;
+    }
+
+    .hover-bg {
+      @include flex($direction: column);
+      overflow: hidden;
+
+      h4 {
+        @include flex($position: absolute);
+        align-items: center;
+        bottom: 0;
+        color: #ffffff;
+        font-weight: 500;
+        justify-content: center;
+        left: 0;
+        opacity: 0;
+        right: 0;
+        text-transform: uppercase;
+        top: 0;
+        transition: all 0.3s;
+        background: linear-gradient(
+          to right,
+          rgba(255, 99, 242, 0.4) 0%,
+          rgba(255, 44, 251, 0.8) 50%
+        );
+      }
+
+      &:hover {
+        transition: all 0.5s;
+
+        .hover-text {
+          opacity: 1;
+        }
+
+        h4 {
+          opacity: 1;
+          z-index: 1;
+          height: 100%;
+        }
+      }
+    }
+
+    img {
+      @include flex();
+    }
+  }
+}

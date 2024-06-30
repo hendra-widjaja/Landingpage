@@ -373,19 +373,22 @@
   position: relative;
   gap: 1.5rem;
 }
-#about .sub-section-left {
+#about .section-left,
+#about .section-right {
   flex-basis: 50%;
 }
-#about .sub-section-right {
-  flex-basis: 50%;
-}
-#about .about-text,
-#about .about-text-top,
-#about .about-text-bottom {
+#about .about-text {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 1.5rem;
+  gap: 3rem;
+}
+#about .section-top,
+#about .section-bottom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
 }
 #about .container-list {
   display: flex;
@@ -397,6 +400,97 @@
   flex-direction: column;
   position: relative;
   gap: 0.5rem;
+}
+
+#services {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 3rem;
+}
+#services .section-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+}
+#services .section-bottom {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#services .section-bottom .card {
+  flex: 31%;
+  width: 100%;
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 3rem;
+}
+#portfolio .section-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+}
+#portfolio .section-bottom {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#portfolio .section-bottom .portfolio {
+  position: relative;
+  cursor: pointer;
+  flex: 31%;
+  width: 100%;
+}
+#portfolio .section-bottom .hover-bg {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .section-bottom .hover-bg h4 {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  color: #ffffff;
+  font-weight: 500;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  transition: all 0.3s;
+  background: linear-gradient(
+    to right,
+    rgba(255, 99, 242, 0.4) 0%,
+    rgba(255, 44, 251, 0.8) 50%
+  );
+}
+#portfolio .section-bottom .hover-bg:hover {
+  transition: all 0.5s;
+}
+#portfolio .section-bottom .hover-bg:hover .hover-text {
+  opacity: 1;
+}
+#portfolio .section-bottom .hover-bg:hover h4 {
+  opacity: 1;
+  z-index: 1;
+  height: 100%;
+}
+#portfolio .section-bottom img {
+  display: flex;
+  position: relative;
 }
 
 :root {

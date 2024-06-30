@@ -4,21 +4,24 @@
   .sub-section {
     @include flex();
     gap: 1.5rem;
+  }
 
-    &-left {
-      flex-basis: 50%;
-    }
-
+  .section {
+    &-left,
     &-right {
       flex-basis: 50%;
     }
   }
 
-  .about-text,
-  .about-text-top,
-  .about-text-bottom {
+  .about-text {
     @include flex($direction: column);
-    gap: 1.5rem;
+    gap: 3rem;
+  }
+
+  .section-top,
+  .section-bottom {
+    @include flex($direction: column);
+    gap: 1rem;
   }
 
   .container-list {

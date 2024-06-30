@@ -4,7 +4,7 @@ export const About = (props) => {
   return (
     <section id="about" className="mx-4">
       <div className="sub-section">
-        <div className="sub-section-left">
+        <div className="section-left">
           <AnimationOnScroll
             delay={200}
             animateOnce
@@ -14,14 +14,14 @@ export const About = (props) => {
           </AnimationOnScroll>
         </div>
 
-        <div className="sub-section-right">
+        <div className="section-right">
           <div className="about-text">
-            <div className="about-text-top">
+            <div className="section-top">
               <h2>About Us</h2>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
             </div>
 
-            <div className="about-text-bottom">
+            <div className="section-bottom">
               <h3>Why Choose Us?</h3>
               <div className="container-list">
                 <ul className="list">
