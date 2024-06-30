@@ -483,11 +483,18 @@
     gap: 1.5rem;
   }
 }
+#about .about-text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media only screen and (max-width: 30rem) {
+  #about .about-text {
+    gap: 2rem;
+  }
+}
 @media only screen and (min-width: 48.05rem) {
   #about .about-text {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     gap: 3rem;
   }
 }

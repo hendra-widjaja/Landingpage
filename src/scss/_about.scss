@@ -45,8 +45,13 @@
   }
 
   .about-text {
+    @include flex($direction: column);
+
+    @include media(mobile) {
+      gap: 2rem;
+    }
+
     @include media(desktop) {
-      @include flex($direction: column);
       gap: 3rem;
     }
   }
