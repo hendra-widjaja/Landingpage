@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 
   @include media(mobile) {
     @include px(1rem);
@@ -84,7 +84,7 @@
   align-items: center;
 
   @include media(mobile) {
-    background-color: rgba(238, 238, 238, 1);
+    background-color: #f4f4f4;
     bottom: 0;
     flex-direction: column;
     gap: 2rem;
@@ -93,8 +93,11 @@
     left: 0;
     position: absolute;
     right: 0;
-    top: calc(var(--navbar-height-mobile) * -50);
-    transition: all 0.5s ease-in;
+
+    &:not(.toggled) {
+      top: calc(var(--navbar-height-mobile) * -50);
+      transition: all 0.5s ease-in;
+    }
 
     &.toggled {
       top: var(--navbar-height-mobile);

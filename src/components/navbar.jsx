@@ -30,6 +30,8 @@ export const Navbar = (props) => {
           </a>
 
           <button
+            role="button"
+            aria-label="navbar-toggle"
             type="button"
             className="navbar-toggle"
             onClick={() => onToggleClick()}

@@ -6,12 +6,17 @@
 @import "./about";
 @import "./services";
 @import "./portfolio";
+@import "./testimonials";
+@import "./contact";
+@import "./footer";
 
 :root {
   --navbar-height: 5rem;
   --navbar-height-mobile: 3rem;
   --section-gap: 5rem;
   --sub-section-gap: 2rem;
+  --footer-height: 3.5rem;
+  --footer-height-mobile: 3rem;
 }
 
 body {

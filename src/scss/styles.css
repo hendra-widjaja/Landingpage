@@ -233,7 +233,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 @media only screen and (max-width: 30rem) {
   .navbar-controller {
@@ -306,7 +306,7 @@
 }
 @media only screen and (max-width: 30rem) {
   .navbar-menu {
-    background-color: rgb(238, 238, 238);
+    background-color: #f4f4f4;
     bottom: 0;
     flex-direction: column;
     gap: 2rem;
@@ -315,6 +315,8 @@
     left: 0;
     position: absolute;
     right: 0;
+  }
+  .navbar-menu:not(.toggled) {
     top: calc(var(--navbar-height-mobile) * -50);
     transition: all 0.5s ease-in;
   }
@@ -493,11 +495,76 @@
   position: relative;
 }
 
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+#testimonials .section-top {
+  padding-bottom: 4.5rem;
+}
+#testimonials .section-bottom {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#testimonials .section-bottom .card {
+  flex: 30%;
+}
+#testimonials .testimonial {
+  display: flex;
+  position: relative;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+#testimonials .testimonial img {
+  border-radius: 50%;
+  max-height: 4rem;
+  max-width: 4rem;
+}
+#testimonials .testimonial-content p {
+  font-size: 14px;
+  font-style: italic;
+}
+#testimonials .testimonial-content .testimonial-meta {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+}
+
+#footer {
+  background-color: #f4f4f4;
+}
+#footer .section-top {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 30rem) {
+  #footer .section-top {
+    height: var(--footer-height-mobile);
+  }
+}
+@media only screen and (min-width: 48rem) {
+  #footer .section-top {
+    height: var(--footer-height);
+  }
+}
+
 :root {
   --navbar-height: 5rem;
   --navbar-height-mobile: 3rem;
   --section-gap: 5rem;
   --sub-section-gap: 2rem;
+  --footer-height: 3.5rem;
+  --footer-height-mobile: 3rem;
 }
 
 body {

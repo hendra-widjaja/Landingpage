@@ -62,6 +62,7 @@ export const Contact = (props) => {
                 </p>
               </AnimationOnScroll>
             </div>
+
             <form name="sentMessage" validate onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-md-6">
@@ -129,7 +130,12 @@ export const Contact = (props) => {
                 animateOnce
                 animateIn="animate__fadeInBottomLeft"
               >
-                <button type="submit" className="btn btn-custom btn-lg">
+                <button
+                  role="button"
+                  aria-label="button-submit"
+                  type="submit"
+                  className="btn btn-custom btn-lg"
+                >
                   Send Message
                 </button>
               </AnimationOnScroll>

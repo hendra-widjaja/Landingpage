@@ -1,0 +1,48 @@
+@import "./dynamic";
+
+#testimonials {
+  @include flex($direction: column);
+  @include py(6.25rem);
+  align-items: center;
+  background-color: #f4f4f4;
+
+  .section-top {
+    padding-bottom: 4.5rem;
+  }
+
+  .section-bottom {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .card {
+      flex: 30%;
+    }
+  }
+
+  .testimonial {
+    @include flex();
+    padding: 1.5rem;
+    gap: 1rem;
+
+    img {
+      border-radius: 50%;
+      max-height: 4rem;
+      max-width: 4rem;
+    }
+  }
+
+  .testimonial-content {
+    p {
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .testimonial-meta {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #666;
+    }
+  }
+}
