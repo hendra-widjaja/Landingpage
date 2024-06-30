@@ -45,7 +45,7 @@ export const Contact = (props) => {
       );
   };
   return (
-    <section id="contact" className="mx-4">
+    <section id="contact">
       <div className="container">
         <div className="col-md-8">
           <div className="row">

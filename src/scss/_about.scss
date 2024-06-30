@@ -2,15 +2,28 @@
 @import "./breakpoints";
 
 #about {
-  .sub-section {
-    @include flex();
-    gap: 1.5rem;
+  @include mx(1rem);
+
+  .section-top {
+    @include media(desktop) {
+      @include flex();
+      gap: 1.5rem;
+    }
   }
 
   .section {
     &-left,
     &-right {
-      flex-basis: 50%;
+      flex: 50% 0;
+    }
+
+    &-right {
+      @include media(mobile) {
+        margin-top: 1rem;
+      }
+
+      @include media(desktop) {
+      }
     }
   }
 

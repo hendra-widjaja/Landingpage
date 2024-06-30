@@ -30,7 +30,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="mx-4">
+    <section id="portfolio">
       <div className="section-top">
         <h2>Gallery</h2>
         <p>

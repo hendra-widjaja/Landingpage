@@ -370,14 +370,32 @@
   text-align: center;
 }
 
-#about .sub-section {
+#features {
   display: flex;
   position: relative;
-  gap: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#about {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media only screen and (min-width: 48rem) {
+  #about .section-top {
+    display: flex;
+    position: relative;
+    gap: 1.5rem;
+  }
 }
 #about .section-left,
 #about .section-right {
-  flex-basis: 50%;
+  flex: 50% 0;
+}
+@media only screen and (max-width: 30rem) {
+  #about .section-right {
+    margin-top: 1rem;
+  }
 }
 #about .about-text {
   display: flex;
@@ -408,6 +426,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
   gap: 3rem;
 }
 #services .section-top {
@@ -432,6 +452,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
   gap: 3rem;
 }
 #portfolio .section-top {
@@ -499,13 +521,21 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 6.25rem;
-  padding-bottom: 6.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   align-items: center;
   background-color: #f4f4f4;
 }
-#testimonials .section-top {
-  padding-bottom: 4.5rem;
+@media only screen and (min-width: 48rem) {
+  #testimonials {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  #testimonials .section-top {
+    padding-bottom: 4.5rem;
+  }
 }
 #testimonials .section-bottom {
   display: flex;
@@ -514,7 +544,7 @@
   gap: 1rem;
 }
 #testimonials .section-bottom .card {
-  flex: 30%;
+  flex: 30% 0;
 }
 #testimonials .testimonial {
   display: flex;
@@ -528,14 +558,19 @@
   max-width: 4rem;
 }
 #testimonials .testimonial-content p {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: italic;
 }
 #testimonials .testimonial-content .testimonial-meta {
-  margin-top: 10px;
-  font-size: 15px;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  color: #666;
+  color: #666666;
+}
+
+#contact {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #footer {
@@ -565,6 +600,10 @@
   --sub-section-gap: 2rem;
   --footer-height: 3.5rem;
   --footer-height-mobile: 3rem;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -628,6 +667,11 @@ a {
   background-image: none;
   background-color: #6372ff;
   transition: all 1s linear;
+}
+
+body,
+img {
+  max-width: 100%;
 }
 
 .container-main {

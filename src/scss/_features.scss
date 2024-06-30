@@ -1,6 +1,7 @@
 @import "./dynamic";
 @import "./breakpoints";
 
-#contact {
+#features {
+  @include flex();
   @include mx(1rem);
 }

@@ -7,13 +7,18 @@ export const Header = (props) => {
         <ParticlesBg
           type="thick"
           bg={{
-            zIndex: 0,
+            color: ["random", "#ff0000"],
+            height: "100vh",
+            maxWidth: "100%",
             position: "absolute",
             top: 0,
-            height: "100vh",
-            color: ["random", "#ff0000"],
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 0,
           }}
         />
+
         <div className="overlay">
           <div className="intro-text">
             <h1>{props.data ? props.data.title : "Loading"}</h1>

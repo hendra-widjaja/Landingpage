@@ -3,6 +3,7 @@
 
 #portfolio {
   @include flex($direction: column);
+  @include mx(1rem);
   gap: 3rem;
 
   .section-top {

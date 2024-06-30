@@ -1,13 +1,20 @@
 @import "./dynamic";
+@import "./breakpoints";
 
 #testimonials {
   @include flex($direction: column);
-  @include py(6.25rem);
+  @include mx(1rem);
   align-items: center;
   background-color: #f4f4f4;
 
+  @include media(desktop) {
+    @include py(6.25rem);
+  }
+
   .section-top {
-    padding-bottom: 4.5rem;
+    @include media(desktop) {
+      padding-bottom: 4.5rem;
+    }
   }
 
   .section-bottom {
@@ -16,7 +23,7 @@
     gap: 1rem;
 
     .card {
-      flex: 30%;
+      flex: 30% 0;
     }
   }
 
@@ -34,15 +41,15 @@
 
   .testimonial-content {
     p {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: italic;
     }
 
     .testimonial-meta {
-      margin-top: 10px;
-      font-size: 15px;
+      margin-top: 0.75rem;
+      font-size: 0.9375rem;
       font-weight: 600;
-      color: #666;
+      color: #666666;
     }
   }
 }

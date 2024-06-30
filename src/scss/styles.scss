@@ -1,8 +1,9 @@
 @import "./generator";
 @import "./container";
+@import "./breakpoints";
 @import "./nav";
 @import "./header";
-@import "./breakpoints";
+@import "./features";
 @import "./about";
 @import "./services";
 @import "./portfolio";
@@ -17,6 +18,10 @@
   --sub-section-gap: 2rem;
   --footer-height: 3.5rem;
   --footer-height-mobile: 3rem;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -85,6 +90,11 @@ a {
     background-color: #6372ff;
     transition: all 1s linear;
   }
+}
+
+body,
+img {
+  max-width: 100%;
 }
 
 .container-main {

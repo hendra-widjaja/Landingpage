@@ -2,11 +2,11 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const Features = (props) => {
   return (
-    <section id="features" className="mx-4">
-      <div className="sub-section-col text-center">
+    <section id="features">
+      <div className="section-top">
         <h2>Features</h2>
 
-        <div className="row">
+        <div className="section-bottom">
           {props.data
             ? props.data.map((d, index) => (
                 <AnimationOnScroll

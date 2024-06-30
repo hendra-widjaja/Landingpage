@@ -2,8 +2,8 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const About = (props) => {
   return (
-    <section id="about" className="mx-4">
-      <div className="sub-section">
+    <section id="about">
+      <div className="section-top">
         <div className="section-left">
           <AnimationOnScroll
             delay={200}
