@@ -131,7 +131,6 @@ export const Contact = (props) => {
                 animateIn="animate__fadeInBottomLeft"
               >
                 <button
-                  role="button"
                   aria-label="button-submit"
                   type="submit"
                   className="btn btn-custom btn-lg"

@@ -253,7 +253,7 @@
   background-image: none;
 }
 .navbar-toggle .icon-bar {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--color-black-9);
   border-radius: 1px;
   height: 2px;
   width: 1.5rem;
@@ -265,15 +265,15 @@
   width: 100%;
 }
 .navbar:not(.active) {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--color-black-9);
   opacity: 0;
   height: 0;
   transition: all 1s;
 }
 .navbar.active {
   opacity: 1;
-  background-color: #ffffff;
-  border-color: rgba(231, 231, 231, 0);
+  background-color: var(--color-white-9);
+  border-color: var(--color-white);
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.15);
   transition: all 0.8s;
   z-index: 1;
@@ -289,7 +289,7 @@
   }
 }
 .navbar a {
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--color-black-9);
 }
 
 .navbar-brand {
@@ -304,11 +304,11 @@
 }
 @media only screen and (max-width: 30rem) {
   .navbar-menu {
-    background-color: #f4f4f4;
+    background-color: var(--color-white);
     bottom: 0;
     flex-direction: column;
     gap: 2rem;
-    height: calc(50vh - var(--navbar-height-mobile));
+    height: calc(100vh - var(--navbar-height-mobile));
     justify-content: center;
     left: 0;
     position: absolute;
@@ -322,6 +322,9 @@
     top: var(--navbar-height-mobile);
     transition: all 0.75s ease-out;
   }
+}
+.navbar-menu .navbar-menu-item {
+  color: var(--color-black-9);
 }
 @media only screen and (min-width: 48.05rem) {
   .navbar-menu {
@@ -480,11 +483,13 @@
     gap: 1.5rem;
   }
 }
-#about .about-text {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 3rem;
+@media only screen and (min-width: 48.05rem) {
+  #about .about-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 3rem;
+  }
 }
 #about .container-list {
   display: flex;
@@ -602,6 +607,12 @@
   align-items: center;
   background-color: var(--color-white-9);
 }
+@media only screen and (max-width: 30rem) {
+  #testimonials {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+}
 @media only screen and (min-width: 48.05rem) {
   #testimonials {
     padding-top: 6.25rem;
@@ -613,14 +624,16 @@
     padding-bottom: 4.5rem;
   }
 }
-#testimonials .section-bottom {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-#testimonials .section-bottom .card {
-  flex: 30% 0;
+@media only screen and (min-width: 48.05rem) {
+  #testimonials .section-bottom {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #testimonials .section-bottom .card {
+    flex: 30% 0;
+  }
 }
 #testimonials .testimonial {
   display: flex;
@@ -670,7 +683,10 @@
 }
 
 :root {
-  --color-white-9: rgba(244, 244, 244, 0.9);
+  --color-grey: rgba(119, 119, 119, 1);
+  --color-white: rgba(230, 230, 230, 1);
+  --color-white-9: rgba(230, 230, 230, 0.9);
+  --color-black-9: rgba(30, 30, 30, 0.9);
   --navbar-height-mobile: 3rem;
   --navbar-height: 5rem;
   --section-gap-mobile: 2rem;
@@ -690,7 +706,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   text-rendering: optimizeLegibility !important;
-  color: #777777;
+  color: var(--color-grey);
 }
 
 body,

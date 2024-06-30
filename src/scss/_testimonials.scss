@@ -7,6 +7,10 @@
   align-items: center;
   background-color: var(--color-white-9);
 
+  @include media(mobile) {
+    @include py(3.25rem);
+  }
+
   @include media(desktop) {
     @include py(6.25rem);
   }
@@ -18,12 +22,14 @@
   }
 
   .section-bottom {
-    @include flex();
-    flex-wrap: wrap;
-    gap: 1rem;
+    @include media(desktop) {
+      @include flex();
+      flex-wrap: wrap;
+      gap: 1rem;
 
-    .card {
-      flex: 30% 0;
+      .card {
+        flex: 30% 0;
+      }
     }
   }
 

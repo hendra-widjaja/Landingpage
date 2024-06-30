@@ -32,7 +32,7 @@ export const Portfolio = () => {
   return (
     <section id="portfolio">
       <div className="section-top">
-        <h2>Gallery</h2>
+        <h2>Portfolio</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
           dapibus leonec.

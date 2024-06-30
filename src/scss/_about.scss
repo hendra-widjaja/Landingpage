@@ -45,8 +45,10 @@
   }
 
   .about-text {
-    @include flex($direction: column);
-    gap: 3rem;
+    @include media(desktop) {
+      @include flex($direction: column);
+      gap: 3rem;
+    }
   }
 
   .container-list {

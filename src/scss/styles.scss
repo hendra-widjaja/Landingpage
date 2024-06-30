@@ -12,7 +12,10 @@
 @import "./footer";
 
 :root {
-  --color-white-9: rgba(244, 244, 244, 0.9);
+  --color-grey: rgba(119, 119, 119, 1);
+  --color-white: rgba(230, 230, 230, 1);
+  --color-white-9: rgba(230, 230, 230, 0.9);
+  --color-black-9: rgba(30, 30, 30, 0.9);
   --navbar-height-mobile: 3rem;
   --navbar-height: 5rem;
   --section-gap-mobile: 2rem;
@@ -32,7 +35,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   text-rendering: optimizeLegibility !important;
-  color: #777777;
+  color: var(--color-grey);
 }
 
 body,

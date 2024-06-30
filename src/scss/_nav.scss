@@ -2,7 +2,7 @@
 @import "./breakpoints";
 
 .container-navbar {
-  @include flex($position: relative);
+  @include flex();
   justify-content: space-between;
   width: 100%;
 
@@ -32,7 +32,7 @@
   background-image: none;
 
   .icon-bar {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--color-black-9);
     border-radius: 1px;
     height: 2px;
     width: 1.5rem;
@@ -44,7 +44,7 @@
   width: 100%;
 
   &:not(.active) {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--color-black-9);
     opacity: 0;
     height: 0;
     transition: all 1s;
@@ -52,8 +52,8 @@
 
   &.active {
     opacity: 1;
-    background-color: #ffffff;
-    border-color: rgba(231, 231, 231, 0);
+    background-color: var(--color-white-9);
+    border-color: var(--color-white);
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.15);
     transition: all 0.8s;
     z-index: 1;
@@ -68,7 +68,7 @@
   }
 
   a {
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--color-black-9);
   }
 }
 
@@ -82,11 +82,11 @@
   align-items: center;
 
   @include media(mobile) {
-    background-color: #f4f4f4;
+    background-color: var(--color-white);
     bottom: 0;
     flex-direction: column;
     gap: 2rem;
-    height: calc(50vh - var(--navbar-height-mobile));
+    height: calc(100vh - var(--navbar-height-mobile));
     justify-content: center;
     left: 0;
     position: absolute;
@@ -101,6 +101,10 @@
       top: var(--navbar-height-mobile);
       transition: all 0.75s ease-out;
     }
+  }
+
+  .navbar-menu-item {
+    color: var(--color-black-9);
   }
 
   @include media(desktop) {

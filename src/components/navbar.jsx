@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useWindowSize } from "./helper/hooks/useWindowSize";
+import { scrollToTarget, useWindowSize } from "./helper/hooks";
 
 export const Navbar = (props) => {
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
   const [navBarBackground, setNavBarBackgorund] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
 
@@ -15,6 +15,11 @@ export const Navbar = (props) => {
     if (width < 768) {
       setMenuActive((prev) => !prev);
     }
+  };
+
+  const onMenuClick = (target) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    scrollToTarget(target, 150);
   };
 
   useEffect(() => {
@@ -35,7 +40,6 @@ export const Navbar = (props) => {
 
           {width < 768 && (
             <button
-              role="button"
               aria-label="navbar-toggle"
               type="button"
               className="navbar-toggle"
@@ -49,30 +53,32 @@ export const Navbar = (props) => {
         </div>
 
         <ul className={`navbar-menu${menuActive ? " toggled" : ""}`}>
-          <li className="navbar-menu-item">
-            <a href="/#features" className="page-scroll">
-              Features
-            </a>
+          <li
+            className="navbar-menu-item"
+            onClick={() => onMenuClick("features")}
+          >
+            Features
           </li>
-          <li className="navbar-menu-item">
-            <a href="/#about" className="page-scroll">
-              About
-            </a>
+          <li className="navbar-menu-item" onClick={() => onMenuClick("about")}>
+            About
           </li>
-          <li className="navbar-menu-item">
-            <a href="/#services" className="page-scroll">
-              Services
-            </a>
+          <li
+            className="navbar-menu-item"
+            onClick={() => onMenuClick("services")}
+          >
+            Services
           </li>
-          <li className="navbar-menu-item">
-            <a href="/#portfolio" className="page-scroll">
-              Gallery
-            </a>
+          <li
+            className="navbar-menu-item"
+            onClick={() => onMenuClick("portfolio")}
+          >
+            Gallery
           </li>
-          <li className="navbar-menu-item">
-            <a href="/#testimonials" className="page-scroll">
-              Testimonials
-            </a>
+          <li
+            className="navbar-menu-item"
+            onClick={() => onMenuClick("testimonials")}
+          >
+            Testimonials
           </li>
         </ul>
       </div>

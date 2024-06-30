@@ -28,6 +28,8 @@ function Home() {
       <div className="divider" />
 
       <Services data={landingPageData.Services} />
+      <div className="divider" />
+
       <Portfolio />
       <div className="divider" />
 
